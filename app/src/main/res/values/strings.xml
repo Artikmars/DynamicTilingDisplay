@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">Dynamic Tiling Display</string>
+    <string name="action_settings">Settings</string>
+    <string name="DisplayTilingString">Display Tiling</string>
+    <string name="p2pConnectionDialogueTitle">Choose Device for Tiling</string>
+    <string name="connection_window_not_connected_title">No Connection</string>
+    <string name="connection_window_connected_content">You are connected to a device and ready to go!</string>
+    <string name="cool">Cool</string>
+    <string name="connection_widow_not_connected_content">Connect to a nearby device</string>
+    <string name="agree">Okay</string>
+    <string name="connection_window_connected_title">Connection is established</string>
+
+    <string name="title_activity_tiled">TiledActivity</string>
+    <string name="disconnect_button">Disconnect</string>
+
+    <string name="title_activity_tiled_view">TiledViewActivity</string>
+
+    <string name="hello_world">Hello world!</string>
+
+    <string name="title_activity_fullscreen">FullscreenActivity</string>
+</resources>

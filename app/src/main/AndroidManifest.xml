@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.artamonovchowdhury.displaytiling" >
+
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.VIBRATE"/>
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name="com.artamonovchowdhury.displaytiling.MainActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <service
+            android:name="com.artamonovchowdhury.displaytiling.ServerService"
+            android:exported="false" >
+            <intent-filter>
+                <action android:name="com.artamonovchowdhury.displaytiling.ACTION_START" />
+                <action android:name="com.artamonovchowdhury.displaytiling.ACTION_SWIPE" />
+                <action android:name="com.artamonovchowdhury.displaytiling.ACTION_ESTABLISH_SOCKETS" />
+            </intent-filter>
+        </service>
+        <service
+            android:name="com.artamonovchowdhury.displaytiling.ClientService"
+            android:exported="false" >
+        </service>
+
+        <activity
+            android:name="com.artamonovchowdhury.displaytiling.TiledViewActivity"
+            android:label="@string/title_activity_tiled_view" >
+        </activity>
+        <activity
+            android:name="com.artamonovchowdhury.displaytiling.FullscreenActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="@string/title_activity_fullscreen"
+            android:theme="@style/FullscreenTheme" >
+        </activity>
+    </application>
+
+</manifest>
